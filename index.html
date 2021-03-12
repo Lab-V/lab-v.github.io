@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ilias Ilmambetov">
+    <title>MX 3 Logitech / Geekbrains contest</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+
+      var _rootDocumentObj, _windowObj;
+
+      $(document).ready( function() {
+        _rootDocumentObj = $(this);
+        _windowObj = $(window);
+
+        var _nav = _rootDocumentObj.find(".navbar");
+        var _logoDark = _nav.find(".header_logo_dark");
+        var _logoWhite = _nav.find(".header_logo_white");
+        var _navbarToggler = _nav.find(".navbar-toggler");
+        var _navItems = _nav.find(".nav-link");
+
+        _navbarToggler.on("click", function(event){
+          _nav.toggleClass("navbar_opened");
+          _logoDark.toggle();
+          _logoWhite.toggle();
+        })
+
+        var clearFocus = function(){
+          _navItems.each(function(i){
+            $(this).removeClass("active");
+          });
+        };
+
+
+        _navItems.on("click", function(event){
+          // _navbarToggler.trigger("click");
+          clearFocus();
+          $(this).toggleClass("active");
+        });
+
+        _windowObj.resize(function(){
+          var _w = window.matchMedia("(min-width: 1024px)");
+          if (_w.matches) {
+            _logoWhite.show();
+            _logoDark.hide();
+          } else {
+            _logoWhite.hide();
+            _logoDark.show();
+          }
+        });
+      });
+    
+    
+    </script>
+</head>
+<body>
+    <section class="top ">
+        <header class="header center">
+            <nav class="navbar navbar-expand-lg navbar-light">
+              <div class="container-fluid">
+                <a href="index.html"><img class="header_logo header_logo_dark" src="img/Logo_Logitech_dark 1.svg" alt="logo"></a>
+                <a href="index.html"><img class="header_logo header_logo_white" src="img/Logo_Logitech 1.svg" alt="logo"></a>
+            
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <div class="navbar-toggler-icon"></div>
+                  <div class="close-icon"></div>
+                </button>
+                <div class="collapse navbar-collapse menu_desktop" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="true" href="#section_bluetooth" >РАБОТАЙТЕ БЕЗ ПРОВОДОВ</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#section_info" >ГДЕ УГОДНО</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#section_settings" >С КОМФОРТОМ</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#section_flow" ">С РАЗНЫХ УСТРОЙСТВ</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#mouse_text_1" >В ЛЮБОЕ ВРЕМЯ</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#mouse_text_2" >И ЕЩЕ БЫСТРЕЕ</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+        </header>
+        <div class="top__img center">
+            <!-- section_title_text    -->
+            <h2 class="heading">РАБОТАЙТЕ ПРОДУКТИВНЕЕ</h2>
+        </div>
+        <p class="text top_text_margins">
+             Создана для эффективной работы, программирования и творчества
+        </p>
+        <div class="top_arrow center-content" href="">
+          <a href="#section_bluetooth">
+            <svg class="top_arrow_svg" width="61" height="33" viewBox="0 0 61 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 2L30.5 31L59 2" stroke="#FF2947" stroke-width="3" stroke-linejoin="round"/>
+              </svg>
+              
+            <!-- <svg width="42" height="22" viewBox="0 0 42 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L20.6552 21L40.3103 1" stroke="#FF2947" stroke-width="2" stroke-linejoin="round"/>
+              </svg> -->
+          </a>
+        </div>
+    </section>
+    <section class="bluetooth" id="section_bluetooth">
+        <div class="bluetooth_icon center-content">
+            <svg class="bt_icon_svg" width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21.0795 29.1654L12.6682 19.9749L21.0795 10.7855C21.3437 10.4961 21.4785 10.1105 21.4503 9.7195C21.4221 9.32812 21.2348 8.96529 20.9309 8.71646L10.7058 0.32611C10.2773 -0.0257154 9.68472 -0.0996072 9.18305 0.137362C8.68137 0.373316 8.36168 0.876748 8.36168 1.43027V15.2702L2.49181 8.85628C1.95855 8.27326 1.05123 8.23222 0.466896 8.76476C-0.11744 9.29729 -0.158575 10.2016 0.375163 10.7851L8.36168 19.5117V20.4384L0.375241 29.1654C-0.158966 29.7479 -0.117831 30.6528 0.466974 31.1857C1.05178 31.7187 1.95823 31.6777 2.49189 31.0937L8.36129 24.6808V38.5198C8.36129 39.0727 8.68145 39.5766 9.18266 39.8131C9.37762 39.9047 9.58689 39.95 9.79475 39.95C10.1211 39.95 10.4441 39.8394 10.7059 39.6249L20.9309 31.2343C21.2348 30.9851 21.4221 30.6222 21.4503 30.2313C21.4784 29.8404 21.3447 29.4547 21.0795 29.1654ZM11.2285 4.45836L17.9441 9.96841L11.2285 17.3062V4.45836ZM11.2285 35.4916V22.6442L17.9441 29.9815L11.2285 35.4916Z" fill="#C4C4C4"/>
+              </svg>
+            
+            <!-- <svg width="18" height="34" viewBox="0 0 18 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.6858 24.8216L10.6287 16.9999L17.6858 9.17916C17.9075 8.93286 18.0206 8.60468 17.9969 8.27192C17.9733 7.93882 17.8161 7.63003 17.5612 7.41826L8.98225 0.27754C8.62269 -0.0218854 8.12554 -0.0847721 7.70464 0.116904C7.28373 0.317716 7.0155 0.746169 7.0155 1.21725V12.9959L2.09065 7.53726C1.64323 7.04108 0.88199 7.00615 0.391728 7.45937C-0.0985325 7.91259 -0.133045 8.68224 0.314764 9.17883L7.0155 16.6057V17.3944L0.31483 24.8216C-0.133373 25.3174 -0.0988606 26.0875 0.391794 26.5411C0.882449 26.9947 1.64297 26.9597 2.09071 26.4628L7.01517 21.0049V32.7828C7.01517 33.2534 7.28379 33.6822 7.70431 33.8835C7.86788 33.9614 8.04346 34 8.21786 34C8.49166 34 8.76265 33.9058 8.98232 33.7233L17.5612 26.5824C17.8161 26.3703 17.9733 26.0615 17.9969 25.7288C18.0205 25.3961 17.9083 25.0678 17.6858 24.8216ZM9.42081 3.79435L15.0552 8.48375L9.42081 14.7287V3.79435ZM9.42081 30.2056V19.2716L15.0552 25.5162L9.42081 30.2056Z" fill="#C4C4C4"/>
+                </svg> -->
+                
+        </div>
+        <h2 class="heading">
+            БЕЗ ПРОВОДОВ
+        </h2>
+        <p class="text text_margins center">
+            Беспроводная мышь MX Master 3 работает без проводов до нескольких месяцев. Вы закроете приоритетные задачи прежде, чем понадобится подзарядка.
+        </p>
+        <div class="bluetooth_center">
+          <div class="bluetooth_img">
+            <h3 class="bluetooth_heading"><span class="bluetooth_heading_desktop_num">70</span><span class="bluetooth_heading_desktop_word"> дней</span></h3>
+         </div>
+        </div>
+        
+    </section>
+    <section class="info" id="section_info">
+        <h2 class="heading">ЗА ЛЮБЫМ СТОЛОМ</h2>
+        <p class="text info_text_margins">
+            Исследуйте ландшафты своего дома, не отвлекаясь от работы.
+            MX 
+            Master 3 достаточно компактная, 
+            чтобы сменить рабочее место и 
+            перенестись с ноутбуком на кухню.
+        </p>
+        <div class="info_content">
+            <div class="info_item">
+                <h2 class="heading info_item_heading">В 5 раз</h2>
+                <p class="text">
+                    точнее
+                    предшественников
+                </p>
+            </div>
+            <div class="info_item">
+                <h2 class="heading info_item_heading">
+                    4 000
+                </h2>
+                <p class="text">
+                    точек на дюйм чувствительность датчика
+                </p>
+            </div>
+        </div>
+        <div class="info_slider_container">
+          <div id="carouselExampleIndicators" class="carousel slide info_slider" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" class="rounded-circle info_carousel_button info_carousel_wood active" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" class="rounded-circle info_carousel_button info_carousel_glass" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" class="rounded-circle info_carousel_button info_carousel_linoleum" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" class="rounded-circle info_carousel_button info_carousel_cloth" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" class="rounded-circle info_carousel_button info_carousel_marble" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/wood.jpg" class="d-block w-100" alt="wood">
+              </div>
+              <div class="carousel-item">
+                <img src="img/glass.png" class="d-block w-100" alt="glass">
+              </div>
+              <div class="carousel-item">
+                <img src="img/linoleum.png" class="d-block w-100" alt="linoleum">
+              </div>
+              <div class="carousel-item">
+                <img src="img/cloth.png" class="d-block w-100" alt="cloth">
+              </div>
+              <div class="carousel-item">
+                <img src="img/marble.png" class="d-block w-100" alt="marble">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        
+          <h3 class="info_heading center-content">Переключите поверхность</h3>
+            <p class="text text_margins info_text_margins">
+                Благодаря технологии Logitecch Darkfierd, MX&nbsp;Master&nbsp;3 работает на любой поверхности, даже на стекле.
+            </p>
+    </section>
+    <section class="flow flow_center" id="section_flow">
+        <h2 class="heading">
+            ОДНОВРЕМЕННО С НЕСКОЛЬКИХ УСТРОЙСТВ
+        </h2>
+        <p class="text text_margins flow_text_p">
+            С технологией Flow вы сможете работать одновременно на нескольких компьютерах, мгновенно
+переключаясь между разными операционными системами — даже между Windows® и macOS.
+Например, достаточно скопировать текст, изображение или файл на MacBook и переместить его
+на Windows PC без задержек.
+        </p>
+        <br>
+        <p class="text text_margins flow_text_p">Клавиатура MX Keys отслеживает перемещение курсора мыши MX Master 3, благодаря чему ваш
+текст появится там, где вы работаете в текущий момент.
+        </p>
+        <ol class="flow_ol">
+            <li class="text flow_li">Нажмите и удерживайте
+                папку, чтобы переместить её</li>
+            <li class="text flow_li">Перенесите папку на любой
+                из соседних экранов</li>
+            <li class="text flow_li">Да, всё так просто!</li>
+        </ol>
+    </section>
+    <section class="settings center" id="section_settings">
+        <h2 class="heading settings_heading">С ИНДИВИДУАЛЬНЫМИ НАСТРОЙКАМИ</h2>
+        <p class="text text_margins settings_text_p">
+            Мышь MX Master 3 адаптируется под ваши рабочие процессы. Благодаря
+индивидуальным настройкам, вы сможете настроить кнопки и жесты практически
+под любое используемое приложение.
+        </p>
+        <div class="settings_img">
+          <img src="img/744aa55 1.png" alt="settings image">
+        </div>
+        <div id="settings_slider" class="carousel slide settings_slider" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" class="settings_carousel_button active" data-bs-target="#settings_slider" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" class="settings_carousel_button" data-bs-target="#settings_slider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" class="settings_carousel_button" data-bs-target="#settings_slider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" class="settings_carousel_button" data-bs-target="#settings_slider" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" class="settings_carousel_button" data-bs-target="#settings_slider" data-bs-slide-to="4" aria-label="Slide 5"></button>
+              <button type="button" class="settings_carousel_button" data-bs-target="#settings_slider" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/f370c2e.png" class="d-block w-100" alt="mice features">
+              </div>
+              <div class="carousel-item">
+                <img src="img/fecdd75.png" class="d-block w-100" alt="mice features">
+              </div>
+              <div class="carousel-item">
+                <img src="img/b74bcf9.png" class="d-block w-100" alt="mice features">
+              </div>
+              <div class="carousel-item">
+                <img src="img/c075726.png" class="d-block w-100" alt="mice features">
+              </div>
+              <div class="carousel-item">
+                <img src="img/e987ca8.png" class="d-block w-100" alt="mice features">
+              </div>
+              <div class="carousel-item">
+                <img src="img/f8bf6eb.png" class="d-block w-100" alt="mice features">
+              </div>
+            </div>
+            <!--
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+            -->
+          </div>
+          <div class="settings_content">
+              <div class="settings_icons">
+                <img class="settings_icon_image" src="img/3255aba_ps_icon.svg" alt="programm">
+                <img class="settings_icon_image" src="img/fb7cb0e_pr_icon.svg" alt="programm">
+                <img class="settings_icon_image" src="img/6cdb3de_browsers_icon.svg" alt="programm">
+                <img class="settings_icon_image" src="img/a912d31_w_icon.svg" alt="programm">
+                <img class="settings_icon_image" src="img/48bb36d_p_icon.svg" alt="programm">
+                <img class="settings_icon_image" src="img/9def687_x_icon.svg" alt="programm">
+                <img class="settings_icon_image" src="img/95dc294_player_icon.svg" alt="programm">
+              </div>
+              <p class="text settings_content_text">
+                Начните работать продуктивнее с момента 
+                покупки — устройство предварительно 
+                оптимизировано под популярные
+                приложения на Windows и Mac.
+              </p>
+          </div>
+    </section>
+    <section class="mouse mouse_center">
+      <div class="mouse_text mouse_item mouse_text_1" id="mouse_text_1">
+        <h2 class="heading ">КОМФОРТНО. ЭРГОНОМИЧНО. ИНТУИТИВНО.</h2>
+          <p class="text text_margins mouse_text_p ">
+            Дизайн мыши MX Master 3 разработан так, чтобы с точностью повторять форму вашей ладони. Но не менее важны колесико прокрутки для большого пальца
+и расположение кнопок жестов, с которыми вы будете творить уверенно как никогда.
+          </p>
+      </div>
+      <div class="mouse_img mouse_img_1 mouse_item">
+
+      </div>
+      <div class="mouse_text mouse_item mouse_text_2" id="mouse_text_2">
+        <h2 class="heading mouse_heading">БЫСТРЕЕ, ЧЕМ КОГДА-ЛИБО</h2>
+        <p class="text text_margins mouse_text_p">Компьютерная мышь MX Master 3 предлагает ультимативный механизм прокрутки
+          со скоростью 1000 строк за 1 секунду.
+          С точностью до пикселя. Бесшумно.</p>
+      </div>
+      <div class="mouse_img mouse_img_2 mouse_item">
+
+      </div>
+    </section>
+    <footer class="footer">
+      Copyright &copy; 2021 Logitech<br>
+      Все права защищены
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</body>
+</html>
