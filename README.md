@@ -1,1 +1,1 @@
-# lab-v.github.io
+## This is short demo site for Logitech / Geekbrains contest
