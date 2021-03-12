@@ -1,1 +1,1 @@
-## This is short demo site for Logitech / Geekbrains contest
+## This is short demo site for Logitech / GeekBrains contest
